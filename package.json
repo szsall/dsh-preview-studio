@@ -5,7 +5,7 @@
   "license": "MIT",
   "author": "szsall",
   "type": "module",
-  "description": "Live, inspectable app preview for EXE/APK work: run the app, select elements for precise code edits, adjust size/position/rotation/text/color, and gate packaging behind user confirmation.",
+  "description": "Experimental: tested only on DeepSeek Harness Desktop 0.2.1-rc.2. Live, inspectable app preview for EXE/APK work: run the app, select elements for precise code edits, adjust size/position/rotation/text/color, and gate packaging behind user confirmation.",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/szsall/dsh-preview-studio.git"

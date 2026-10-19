@@ -2,7 +2,7 @@
 
 ## 0.1.0 — 2026-10-19
 
-Initial public release.
+Initial public release. **Experimental:** only tested on DeepSeek Harness Desktop 0.2.1-rc.2; published to discover whether it works in other environments.
 
 - Live preview panel for the DeepSeek Harness Web UI, served from a loopback-only preview server.
 - Run / select / adjust modes: multi-select elements, drag, resize, rotate, edit text and colors.

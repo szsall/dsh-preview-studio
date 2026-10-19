@@ -2,6 +2,11 @@
 
 [github.com/szsall/dsh-preview-studio](https://github.com/szsall/dsh-preview-studio) · [![test](https://github.com/szsall/dsh-preview-studio/actions/workflows/test.yml/badge.svg)](https://github.com/szsall/dsh-preview-studio/actions/workflows/test.yml)
 
+> [!WARNING]
+> **实验版 / Experimental.** 只在 **DeepSeek Harness 桌面版 0.2.1-rc.2** 上成功运行过。作者发布它，主要是想看看在其它版本、其它环境里能不能用；不保证兼容性，接口和行为都可能变化，请先备份项目再试。
+>
+> Only tested on **DeepSeek Harness Desktop 0.2.1-rc.2**. This is an experiment published to find out whether it works elsewhere. No compatibility guarantees.
+
 给 DeepSeek Harness 桌面端用的插件：当你要做 **EXE** 或 **安卓 APK** 时，先在 Harness 里打开一个「和运行后长得一样」的实时预览窗口，试用、点选、可视化调整，**每次生成前由用户确认**（也可在面板里开启「无需确认」）之后模型才允许打包。
 
 ![icon](./icon.svg)
@@ -33,6 +38,14 @@ plugin_manager install_bundle  target = <克隆目录>
 ```
 
 安装并激活后，右下角会出现预览浮窗（有预览时），插件列表里显示「实时预览工坊」。
+
+## 兼容性 / Compatibility
+
+- **已成功运行**：DeepSeek Harness **桌面版 0.2.1-rc.2**（Windows，Web UI）。
+- **未验证**：其它 DSH 版本、单独运行的 `dsh web`、macOS/Linux、不同的插件加载方式。
+- 这是实验版：预览注入、面板 API、打包守卫都可能随 DSH 版本变化而失效。
+- 如果你在别的版本/系统上跑通或跑不通，欢迎开 issue 并附上：
+  DSH 版本、操作系统、失败现象或日志、复现步骤。仓库提供了兼容性报告模板。
 
 ## 打开 / 收起 / 重新打开
 

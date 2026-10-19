@@ -1,0 +1,46 @@
+name: Compatibility report
+description: Tell us whether Preview Studio works on your DeepSeek Harness version and environment.
+title: "[compat] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        This plugin is experimental and was only tested on **DeepSeek Harness Desktop 0.2.1-rc.2**.
+        Reports from other versions and systems are exactly what we want.
+  - type: input
+    id: dsh_version
+    attributes:
+      label: DeepSeek Harness version
+      description: For example 0.2.1-rc.2, or the output of the version command.
+      placeholder: 0.2.1-rc.2
+    validations:
+      required: true
+  - type: dropdown
+    id: os
+    attributes:
+      label: Operating system
+      options:
+        - Windows
+        - macOS
+        - Linux
+        - Other
+    validations:
+      required: true
+  - type: dropdown
+    id: result
+    attributes:
+      label: Result
+      options:
+        - Works
+        - Partially works
+        - Does not work
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: Details
+      description: What you tried, what happened, and any error or log output.
+      placeholder: Steps, error messages, screenshots, console output...
+    validations:
+      required: true
