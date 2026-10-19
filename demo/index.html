@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nebula 任务清单</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <div class="brand">
+        <span class="logo" aria-hidden="true">N</span>
+        <div>
+          <h1>Nebula 任务</h1>
+          <p>今天也要专注完成重要的事</p>
+        </div>
+      </div>
+      <nav class="tabs" role="tablist" aria-label="任务筛选">
+        <button id="tab-all" class="tab active" role="tab" aria-selected="true">全部</button>
+        <button id="tab-open" class="tab" role="tab" aria-selected="false">进行中</button>
+        <button id="tab-done" class="tab" role="tab" aria-selected="false">已完成</button>
+      </nav>
+    </header>
+
+    <main class="content">
+      <section class="hero" id="hero-card">
+        <div class="hero-text">
+          <h2>保持节奏，逐个击破</h2>
+          <p>把今天最重要的三件事写下来，先完成它们。</p>
+        </div>
+        <div class="meter" role="img" aria-label="今日完成度 40%">
+          <span class="meter-value">40%</span>
+          <span class="meter-label">今日完成度</span>
+        </div>
+      </section>
+
+      <section class="composer" aria-label="添加任务">
+        <input id="task-input" type="text" placeholder="添加一项新任务…" autocomplete="off" />
+        <button id="add-task" class="primary">添加任务</button>
+      </section>
+
+      <section class="board" id="board" aria-label="任务列表"></section>
+    </main>
+  </div>
+  <script src="./app.js"></script>
+</body>
+</html>

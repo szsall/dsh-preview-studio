@@ -1,6 +1,6 @@
 # 实时预览工坊 · Live Preview Studio
 
-[github.com/szsall/dsh-preview-studio](https://github.com/szsall/dsh-preview-studio)
+[github.com/szsall/dsh-preview-studio](https://github.com/szsall/dsh-preview-studio) · [![test](https://github.com/szsall/dsh-preview-studio/actions/workflows/test.yml/badge.svg)](https://github.com/szsall/dsh-preview-studio/actions/workflows/test.yml)
 
 给 DeepSeek Harness 桌面端用的插件：当你要做 **EXE** 或 **安卓 APK** 时，先在 Harness 里打开一个「和运行后长得一样」的实时预览窗口，试用、点选、可视化调整，**每次生成前由用户确认**（也可在面板里开启「无需确认」）之后模型才允许打包。
 
@@ -126,12 +126,14 @@ preview-studio/
   lib/studio.js          预览状态、文件监听、上下文注入、API、闸门
   lib/source-map.js      选中元素 -> 候选源码位置
   locale/{zh,en}.json    插件管理页显示信息
+  test/preview.test.mjs  Host 核心自测（64 项）
+  demo/                  自测用的静态页面
 ```
 
 ## 开发自测
 
 ```bash
-node _dev/test-preview.mjs
+node test/preview.test.mjs
 ```
 
 覆盖静态预览源、检查器注入、路径穿越防护、SPA 回退、源码候选、状态 API、选择/调整同步、确认闸门、文件监听自动刷新。
