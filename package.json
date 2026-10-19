@@ -1,0 +1,60 @@
+{
+  "name": "@local/preview-studio",
+  "version": "0.1.0",
+  "private": false,
+  "license": "MIT",
+  "author": "szsall",
+  "type": "module",
+  "description": "Live, inspectable app preview for EXE/APK work: run the app, select elements for precise code edits, adjust size/position/rotation/text/color, and gate packaging behind user confirmation.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/szsall/dsh-preview-studio.git"
+  },
+  "homepage": "https://github.com/szsall/dsh-preview-studio#readme",
+  "bugs": {
+    "url": "https://github.com/szsall/dsh-preview-studio/issues"
+  },
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "dsh-plugin",
+    "live-preview",
+    "visual-editing",
+    "electron",
+    "android",
+    "apk"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "preview-inspector.js",
+    "cordis.patch.yml",
+    "lib/*.js",
+    "locale/*.json",
+    "icon.svg",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-layout"
+      ]
+    }
+  }
+}
